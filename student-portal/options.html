@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+  <head>
+    <title>HTU Dummy Portal</title>
+    <link rel="stylesheet" href="../styles/template.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="../images/HTU H.png" type="image/x-icon">
+    <script src="../scripts/navbar.js"></script>
+    <script src="../scripts/counter.js"></script>
+    <link rel="stylesheet" href="../styles/index.css">
+
+  </head>   
+  <body id="body-pd">
+    <header class="header" id="header">
+        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+        <div>
+          <img src="../images/htulogo.png" alt="HTU Logo" class="htu-logo">
+        </div>
+    </header>
+    <div class="l-navbar" id="nav-bar">
+      <nav class="nav">
+          <div> 
+            <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">HTU Dummy Portal</span> </a>
+            <div class="nav_list"> 
+              <a href="index.html" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> 
+              <a href="#" class="nav_link"> <i class='bx bx-book-open nav_icon'></i> <span class="nav_name">System Guide</span> </a> 
+              <a href="https://www.htu.edu.jo" target="_blank" class="nav_link"> <i class='bx bx-link-alt nav_icon'></i> <span class="nav_name">HTU Website</span> </a> 
+              <a href="#" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Profile</span> </a> 
+            </div>
+          </div>
+          <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
+      </nav>
+  </div>
+  <div class="height-100 bg-light">
+    <h4>Available Schedules</h4>
+    <p>Based on your choices, we generated 3 alternatives for your schedule. Choose the ones that work best for you.</p>
+      <form method="post" action="submitted.html">
+        <div id="courses">
+          <div class="courses-col">
+            <input type="checkbox" name="option1" id="option1" />
+            <label for="option1"><h6>Option 1</h6></label>
+            <table>
+                <tr>
+                    <th style="width:30%">Course</th>
+                    <th>Day(s)</th>
+                    <th>Time</th>
+                </tr>
+                <tr>
+                    <td>Maths for Computing</td>
+                    <td>Mon & Wed</td>
+                    <td>10:30 - 12:30</td>
+                </tr>
+                <tr>
+                    <td>Data Analytics</td>
+                    <td>Mon & Wed</td>
+                    <td>12:30 - 14:30</td>
+                </tr>
+                <tr>
+                    <td>Advanced Programming</td>
+                    <td>Sun & Tue</td>
+                    <td>10:30 - 12:30</td>
+                </tr>
+                <tr>
+                    <td>Data Structures and Algorithms</td>
+                    <td>Sun & Tue</td>
+                    <td>12:30 - 14:30</td>
+                </tr>
+            </table>
+          </div>
+          <div class="courses-col">
+            <input type="checkbox" name="option2" id="option2" />
+            <label for="option2"><h6>Option 2</h6></label>
+            <table>
+                <tr>
+                    <th style="width:30%">Course</th>
+                    <th>Day(s)</th>
+                    <th>Time</th>
+                </tr>
+                <tr>
+                    <td>Maths for Computing</td>
+                    <td>Sun & Tue</td>
+                    <td>10:30 - 12:30</td>
+                </tr>
+                <tr>
+                    <td>Advanced Programming</td>
+                    <td>Sun & Tue</td>
+                    <td>12:30 - 14:30</td>
+                </tr>
+                <tr>
+                    <td>Data Analytics</td>
+                    <td>Sun & Tue</td>
+                    <td>14:30 - 16:30</td>
+                </tr>
+                <tr>
+                    <td>Data Structures and Algorithms</td>
+                    <td>Mon & Wed</td>
+                    <td>12:30 - 14:30</td>
+                </tr>
+            </table>
+
+          </div>
+          <div class="courses-col">
+            <input type="checkbox" name="option3" id="option3" />
+            <label for="option3"><h6>Option 3</h6></label>
+            <table>
+                <tr>
+                    <th style="width:30%">Course</th>
+                    <th>Day(s)</th>
+                    <th>Time</th>
+                </tr>
+                <tr>
+                    <td>Maths for Computing</td>
+                    <td>Mon & Wed</td>
+                    <td>10:30 - 12:30</td>
+                </tr>
+                <tr>
+                    <td>Data Analytics</td>
+                    <td>Mon & Wed</td>
+                    <td>12:30 - 14:30</td>
+                </tr>
+                <tr>
+                    <td>Advanced Programming</td>
+                    <td>Sun & Tue</td>
+                    <td>12:30 - 14:30</td>
+                </tr>
+                <tr>
+                    <td>Data Structures and Algorithms</td>
+                    <td>Mon & Wed</td>
+                    <td>8:30 - 10:30</td>
+                </tr>
+            </table>
+
+          </div>
+        </div>
+        <div class="fixed-bottom footer" id="footer" style="justify-content: flex-end;">
+          <div><input type="submit" class="submit" name="submit" value="Submit Choice" style="margin-right: 8em;"/></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
