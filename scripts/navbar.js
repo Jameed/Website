@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", function(event) {
    
-    const showNavbar = (toggleId, navId, bodyId, headerId) =>{
+    const showNavbar = (toggleId, navId, bodyId, headerId, footerId) =>{
     const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId),
     bodypd = document.getElementById(bodyId),
-    headerpd = document.getElementById(headerId)
+    headerpd = document.getElementById(headerId),
+    footerpd = document.getElementById(footerId);
     
     // Validate that all variables exist
     if(toggle && nav && bodypd && headerpd){
@@ -17,11 +18,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     bodypd.classList.toggle('body-pd')
     // add padding to header
     headerpd.classList.toggle('body-pd')
+    if (footerpd)
+        footerpd.classList.toggle('body-pd')
     })
     }
     }
     
-    showNavbar('header-toggle','nav-bar','body-pd','header')
+    showNavbar('header-toggle','nav-bar','body-pd','header', 'footer')
     
     /*===== LINK ACTIVE =====*/
     const linkColor = document.querySelectorAll('.nav_link')
