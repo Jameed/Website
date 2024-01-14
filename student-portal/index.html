@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+  <head>
+    <title>HTU Dummy Portal</title>
+    <link rel="stylesheet" href="../styles/template.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="../images/HTU H.png" type="image/x-icon">
+    <script src="../scripts/navbar.js"></script>
+    <script src="../scripts/counter.js"></script>
+    <link rel="stylesheet" href="../styles/student-dashboard.css">
+
+  </head>   
+  <body id="body-pd">
+    <header class="header" id="header">
+        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+        <div>
+          <img src="../images/htulogo.png" alt="HTU Logo" class="htu-logo">
+        </div>
+    </header>
+    <div class="l-navbar" id="nav-bar">
+      <nav class="nav">
+          <div> 
+            <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">HTU Dummy Portal</span> </a>
+            <div class="nav_list"> 
+              <a href="#" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> 
+              <a href="#" class="nav_link"> <i class='bx bx-book-open nav_icon'></i> <span class="nav_name">System Guide</span> </a> 
+              <a href="https://www.htu.edu.jo" target="_blank" class="nav_link"> <i class='bx bx-link-alt nav_icon'></i> <span class="nav_name">HTU Website</span> </a> 
+              <a href="#" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Profile</span> </a> 
+            </div>
+          </div>
+          <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
+      </nav>
+  </div>
+  <div class="height-100 bg-light">
+      <h4>Courses Selection</h4>
+      <p>Please select the courses you would like to take next semester.</p>
+      <form method="post">
+        <div id="courses">
+          <div class="courses-col">
+            <h6>University Requirements</h6>
+            <br><i>Mandatory</i>
+            <div>
+              <input type="checkbox" name="en-mid" id="en-mid" />
+              <label for="en-mid">English Intermediate</label>
+            </div>
+            <div>
+              <input type="checkbox" name="en-up-mid" id="en-up-mid" />
+              <label for="en-up-mid">English Upper-Intermediate</label>
+            </div>
+            <div>
+              <input type="checkbox" name="ss1" id="ss1" />
+              <label for="ss1">Soft Skills I</label>
+            </div>
+            <div>
+              <input type="checkbox" name="ss2" id="ss2" />
+              <label for="ss2">Soft Skills II</label>
+            </div>
+            <div>
+              <input type="checkbox" name="bootcamp" id="bootcamp" />
+              <label for="bootcamp">Entrepreneurship Bootcamp</label>
+            </div>
+            <br><i>Electives</i>
+            <div>
+              <input type="checkbox" name="art" id="art" />
+              <label for="art">Art Appreciation and Techniques</label>
+            </div>
+            <div>
+              <input type="checkbox" name="civil" id="civil" />
+              <label for="civil">Civil and Professional Culture</label>
+            </div>
+            <div>
+              <label for="rights"><input type="checkbox" name="rights" id="rights" /> Rights and Responsibilities: Understanding Human Rights</label>
+            </div>
+            <div>
+              <input type="checkbox" name="french" id="french" />
+              <label for="french">Foundational French Language</label>
+            </div>
+          </div>
+          <div class="courses-col">
+            <h6>HND Requirements</h6>
+            <br><i>Mandatory</i>
+              <div>
+                <input type="checkbox" name="dsa" id="dsa" />
+                <label for="dsa">Data Structures and Algorithms</label>
+              </div>
+              <div>
+                <input type="checkbox" name="bi" id="bi"/>
+                <label for="bi">Business Intelligence</label>
+              </div>
+              <div>
+                <input type="checkbox" name="ap" id="ap"/>
+                <label for="ap">Advanced Programming</label>
+              </div>
+              <div>
+                <input type="checkbox" name="ns" id="ns"/>
+                <label for="ns">Network Security</label>
+              </div>
+              <div>
+                <input type="checkbox" name="ad" id="ad"/>
+                <label for="ad">Application Development</label>
+              </div>
+              <div>
+                <input type="checkbox" name="proto" id="proto"/>
+                <label for="proto">Prototyping</label>
+              </div>
+              <div>
+                <input type="checkbox" name="crp" id="crp"/>
+                <label for="crp">Computing Research Project</label>
+              </div>
+          </div>
+          <div class="courses-col">
+            <h6>HNC Requirements</h6>
+            <br><i>Mandatory</i>
+            <div>
+              <input type="checkbox" name="prog" id="prog" />
+              <label for="prog">Programming</label>
+            </div>
+            <div>
+              <input type="checkbox" name="net" id="net" />
+              <label for="net">Networking</label>
+            </div>
+            <div>
+              <input type="checkbox" name="db" id="db" />
+              <label for="db">Database Design and Development</label>
+            </div>
+            <div>
+              <input type="checkbox" name="security" id="security" />
+              <label for="security">Security</label>
+            </div>
+            <div>
+              <label for="managing"><input type="checkbox" name="managing" id="managing" /> Managing a Successful Computing Project</label>
+            </div>
+            <div>
+              <input type="checkbox" name="pp" id="pp" />
+              <label for="pp">Professional Practice</label>
+            </div>
+            <br><i>Electives</i>
+            <div>
+              <input type="checkbox" name="mfc" id="mfc" />
+              <label for="mfc">Maths for Computing</label>
+            </div>
+            <div>
+              <input type="checkbox" name="website" id="website" />
+              <label for="website">Website Design and Development</label>
+            </div>
+            <div>
+              <input type="checkbox" name="sdlc" id="sdlc" />
+              <label for="sdlc">Software Development Lifecycles</label>
+            </div>
+            <div>
+              <input type="checkbox" name="da" id="da" />
+              <label for="da">Data Analytics</label>
+            </div>
+            <div>
+              <input type="checkbox" name="sis" id="sis" />
+              <label for="sis">Strategic Information Systems</label>
+            </div>
+            <div>
+              <input type="checkbox" name="arch" id="arch" />
+              <label for="arch">Computer Systems Architecture</label>
+            </div>
+        </div>
+        </div>
+        <div class="fixed-bottom footer" id="footer">
+          <div>
+            <div><p id="output">Number of credit hours selected: 0</div>
+          </div>
+          <div><input type="submit" class="submit" name="submit" value="Check Available Options"/></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
