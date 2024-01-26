@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTU Dummy Portal</title>
+    <link rel="stylesheet" href="../styles/template.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="../images/HTU H.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/index.css">
+    <script src="../scripts/navbar.js"></script>
+
+   
+  </head>
+  <body id="body-pd">
+    <header class="header" id="header">
+        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+        <div>
+          <img src="../images/htulogo.png" alt="HTU Logo" class="htu-logo">
+        </div>
+    </header>
+    <div class="l-navbar" id="nav-bar">
+      <nav class="nav">
+          <div> 
+            <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">HTU Dummy Portal</span> </a>
+            <div class="nav_list"> 
+              <a href="index.html" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> 
+              <a href="#" class="nav_link"> <i class='bx bx-data nav_icon'></i> <span class="nav_name">Courses Data</span> </a> 
+              <a href="#" class="nav_link"> <i class='bx bx-book-open nav_icon'></i> <span class="nav_name">System Guide</span> </a> 
+              <a href="https://www.htu.edu.jo" target="_blank" class="nav_link"> <i class='bx bx-link-alt nav_icon'></i> <span class="nav_name">HTU Website</span> </a> 
+              <a href="#" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Profile</span> </a> 
+            </div>
+          </div>
+          <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
+      </nav>
+  </div>
+    <div class="height-100 bg-light">
+        <div class="container mt-4">
+            <h5>Add a Course</h5>
+            <form>
+                <div class="mb-3">
+                    <label for="faculty" class="form-label">Faculty</label>
+                    <select class="form-select" id="faculty" name="faculty" required>
+                        <option value="engineering">Engineering</option>
+                        <option value="science">Science</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="courseName" class="form-label">Course Name</label>
+                    <select class="form-select" id="courseName" name="courseName" required>
+                        <option value="math">Math</option>
+                        <option value="physics">Physics</option>
+                        <option value="notExists" onclick="showManualEntryFields()">Not Exists</option>
+                    </select>
+                </div>
+                <div class="mb-3" id="manualCourseName" style="display: none;">
+                    <label for="manualCourseNameInput" class="form-label">Enter Course Name</label>
+                    <input type="text" class="form-control" id="manualCourseNameInput" name="manualCourseNameInput">
+                </div>
+                <div class="mb-3">
+                    <label for="courseNumber" class="form-label">Course Number</label>
+                    <select class="form-select" id="courseNumber" name="courseNumber" onclick="showManualEntryFields()" required>
+                        <option value="101">101</option>
+                        <option value="201">201</option>
+                        <option value="notExists" >Not Exists</option>
+                    </select>
+                </div>
+                <br>
+            <h5 id="topic" style="display: none;">Or Add The Course Manually</h5>
+                <div id="manualCourseNumber" style="display: none;">
+                  <div class="mb-3">
+                      <label for="courseName" class="form-label">Course Name</label>
+                      <input type="text" class="form-control" id="courseName" name="courseName" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="courseCode" class="form-label">Course Code</label>
+                      <input type="text" class="form-control" id="courseCode" name="courseCode" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="courseDescription" class="form-label">Course Description</label>
+                      <textarea class="form-control" id="courseDescription" name="courseDescription" rows="3" required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary add-course-buttom">Add Course</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function showManualEntryFields() {
+            var courseNameSelect = document.getElementById('courseName');
+            var courseNumberSelect = document.getElementById('courseNumber');
+            
+            var manualCourseNumber = document.getElementById('manualCourseNumber');
+            var topic = document.getElementById('topic');
+            if (courseNameSelect.value === "notExists" || courseNumberSelect.value ==="notExists") {
+                manualCourseNumber.style.display = "block";
+                topic.style.display = "block";
+            } else {
+                manualCourseNumber.style.display = "none";
+                topic.style.display = "none";
+            }
+        }
+    </script>
+  </body>
+</html>
